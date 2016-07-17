@@ -2002,7 +2002,8 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <smd name="SIO04" x="13.589" y="-0.762" dx="1.016" dy="1.524" layer="1" rot="R90"/>
 <smd name="SIO17" x="13.589" y="-3.81" dx="1.016" dy="1.524" layer="1" rot="R90"/>
 <smd name="GND4" x="13.589" y="-6.858" dx="1.016" dy="1.524" layer="1" rot="R90"/>
-<rectangle x1="-12.065" y1="8.89" x2="-2.667" y2="13.335" layer="39"/>
+<rectangle x1="-13.335" y1="8.89" x2="-2.54" y2="13.335" layer="41"/>
+<rectangle x1="-13.335" y1="8.89" x2="-2.54" y2="13.335" layer="42"/>
 </package>
 <package name="CR2450-THM">
 <wire x1="-13.904" y1="-1.64" x2="-13.01" y2="-1.64" width="0.127" layer="21"/>
@@ -3534,7 +3535,7 @@ http://dangerousprototypes.com</description>
 <circle x="0" y="0" radius="1" width="2.032" layer="40"/>
 <circle x="0" y="0" radius="1" width="2.032" layer="41"/>
 <circle x="0" y="0" radius="1" width="2.032" layer="42"/>
-<pad name="P$1" x="0" y="0" drill="2.5" diameter="3.2"/>
+<hole x="0" y="0" drill="2.5"/>
 </package>
 <package name="MOUNTINGHOLE_2.5_PLATED_THICK">
 <circle x="0" y="0" radius="2.25" width="0.2032" layer="21"/>
@@ -3640,8 +3641,6 @@ http://dangerousprototypes.com</description>
 </part>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device="" value="3V3"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="U$3" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
-<part name="U$6" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="NAME" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device="" value="Value">
 <attribute name="CNAME" value="RM1xx Lora+BLE breakout board"/>
 <attribute name="CREVISION" value="1.0."/>
@@ -3652,8 +3651,10 @@ http://dangerousprototypes.com</description>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="VBAT" library="SparkFun-Aesthetics" deviceset="VCC" device="" value="Vbat"/>
 <part name="VBAT1" library="SparkFun-Aesthetics" deviceset="VCC" device="" value="Vbat"/>
+<part name="U$3" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
+<part name="U$6" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
+<part name="U$7" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="U$8" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
-<part name="U$9" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 </parts>
 <sheets>
 <sheet>
@@ -3740,8 +3741,6 @@ http://dangerousprototypes.com</description>
 <attribute name="VALUE" x="185.293" y="159.131" size="1.778" layer="96"/>
 </instance>
 <instance part="GND4" gate="1" x="104.14" y="135.255"/>
-<instance part="U$3" gate="G$1" x="13.335" y="22.86"/>
-<instance part="U$6" gate="G$1" x="13.335" y="13.97"/>
 <instance part="NAME" gate="G$1" x="4.445" y="4.445" smashed="yes">
 <attribute name="DRAWING_NAME" x="186.055" y="15.875" size="2.54" layer="94" font="vector"/>
 <attribute name="LAST_DATE_TIME" x="186.055" y="10.795" size="2.286" layer="94" font="vector"/>
@@ -3765,8 +3764,10 @@ http://dangerousprototypes.com</description>
 <instance part="VBAT1" gate="G$1" x="204.47" y="119.38" smashed="yes">
 <attribute name="VALUE" x="201.803" y="122.301" size="1.778" layer="96"/>
 </instance>
-<instance part="U$8" gate="G$1" x="20.955" y="22.86"/>
-<instance part="U$9" gate="G$1" x="20.955" y="13.97"/>
+<instance part="U$3" gate="G$1" x="14.605" y="28.575"/>
+<instance part="U$6" gate="G$1" x="21.59" y="28.575"/>
+<instance part="U$7" gate="G$1" x="27.94" y="28.575"/>
+<instance part="U$8" gate="G$1" x="34.925" y="28.575"/>
 </instances>
 <busses>
 </busses>
@@ -4246,14 +4247,21 @@ http://dangerousprototypes.com</description>
 <approved hash="102,1,26.67,100.33,VCC,VREG,,,,"/>
 <approved hash="102,1,233.68,106.68,VCC,3V3,,,,"/>
 <approved hash="102,1,187.96,156.21,VCC,3V3,,,,"/>
-<approved hash="201,1,187.96,156.21,VCC,VIN\, VREG\, 3V3,,,,"/>
-<approved hash="201,1,233.68,106.68,VCC,VIN\, VREG\, 3V3,,,,"/>
-<approved hash="201,1,26.67,100.33,VCC,VIN\, VREG\, 3V3,,,,"/>
-<approved hash="201,1,140.97,85.09,VCC,VIN\, VREG\, 3V3,,,,"/>
-<approved hash="201,1,166.37,125.095,VCC,VIN\, VREG\, 3V3,,,,"/>
-<approved hash="201,1,119.38,125.095,VCC,VIN\, VREG\, 3V3,,,,"/>
+<approved hash="102,1,116.205,159.385,VCC,VBAT,,,,"/>
+<approved hash="102,1,204.47,119.38,VCC,VBAT,,,,"/>
+<approved hash="201,1,204.47,119.38,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,116.205,159.385,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,187.96,156.21,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,233.68,106.68,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,26.67,100.33,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,140.97,85.09,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,166.37,125.095,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
+<approved hash="201,1,119.38,125.095,VCC,VIN\, VREG\, 3V3\, VBAT,,,,"/>
 <approved hash="104,1,148.59,74.93,U$1,VCC_LORA,3V3,,,"/>
 <approved hash="104,1,133.35,74.93,U$1,VCC_BLE,3V3,,,"/>
+<approved hash="113,1,80.6027,122.115,J2,,,,,"/>
+<approved hash="113,1,84.4127,62.6787,J3,,,,,"/>
+<approved hash="113,1,187.367,57.9713,J4,,,,,"/>
 </errors>
 </schematic>
 </drawing>
