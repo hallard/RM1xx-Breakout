@@ -31,10 +31,12 @@ Click to enlarge
 
 ### Boards  
 
-**Top**
+**Top**    
+
 <img src="https://raw.githubusercontent.com/hallard/RM1xx-Breakout/master/pictures/RM1xx-Breakout-top.png" alt="Top">
     
-**Bottom**
+**Bottom**    
+
 <img src="https://raw.githubusercontent.com/hallard/RM1xx-Breakout/master/pictures/RM1xx-Breakout-bot.png" alt="Bottom">
 
 You can order the PCB of this board at [PCBs.io][3] if you do so, PCBs.io give me little discount that allow me to buy some new created boards.
