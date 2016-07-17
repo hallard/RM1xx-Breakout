@@ -3643,7 +3643,7 @@ http://dangerousprototypes.com</description>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="NAME" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device="" value="Value">
 <attribute name="CNAME" value="RM1xx Lora+BLE breakout board"/>
-<attribute name="CREVISION" value="1.0."/>
+<attribute name="CREVISION" value="1.0a"/>
 <attribute name="DESIGNER" value="Charles-Henri Hallard"/>
 </part>
 <part name="R6" library="_c2h" deviceset="RESISTOR" device="0805-RES" value="390K"/>

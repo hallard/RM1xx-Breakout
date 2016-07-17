@@ -52,5 +52,5 @@ See news and other projects on my [blog][2]
 
 [1]: http://www.lairdtech.com/products/rm1xx-lora-modules
 [2]: https://hallard.me
-[3]: https://PCBs.io/share/rEd28 
+[3]: https://PCBs.io/share/zeJ24 
 
