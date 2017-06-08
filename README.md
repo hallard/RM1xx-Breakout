@@ -8,7 +8,7 @@ They contains the following features
   - I2C Pullups placement
   - CR2540 or LIR2450 battery holder
   - Resistor divider to measure battery voltage using analog pin
-  - On board 3V3 regulator (so Lipo can be used)
+  - On board 3V3 regulator (so Lipo can be used) 
   - JST2 Lipo connector
   - FTDI connector
   - Prog/Debug connector footprint
@@ -18,7 +18,10 @@ They contains the following features
   - I2C Pullups placement
   - Veroboard friendly
 
+Version 1.1 fix the MCP1303 Regulator that was reversed
+
 Boards have been ordered at PCBs.io and have been tested and they are working fine.
+
 
 Detailed Description
 ====================
@@ -73,15 +76,15 @@ You can order the PCB of this minimal breakout board at [PCBs.io][4] if you do s
 <img src="https://raw.githubusercontent.com/hallard/RM1xx-Breakout/master/pictures/RM1xx-Breakout-mounted.jpg" alt="assembled">
 
 
-##License
+###License
 
 You can do whatever you like with this design.
 
-##Misc
+###Misc
 See news and other projects on my [blog][2] 
 
 [1]: http://www.lairdtech.com/products/rm1xx-lora-modules
 [2]: https://hallard.me
-[3]: https://PCBs.io/share/zeJ24 
+[3]: https://PCBs.io/share/rY657 
 [4]: https://PCBs.io/share/49GYW
 

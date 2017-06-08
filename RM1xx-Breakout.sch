@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2355,6 +2355,29 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <wire x1="-0.3" y1="0.3" x2="0.1" y2="0.5" width="0.2" layer="25"/>
 <wire x1="0.1" y1="0.5" x2="0.1" y2="0.7" width="0.2" layer="25"/>
 </package>
+<package name="PAD">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796"/>
+</package>
+<package name="PAD-SMALL">
+<pad name="1" x="0" y="0" drill="0.8128" diameter="1.3716"/>
+</package>
+<package name="PAD-BIG">
+<pad name="1" x="0" y="0" drill="1.4" diameter="2.54"/>
+</package>
+<package name="PAD-SCREW-2.5">
+<pad name="1" x="0" y="0" drill="2.5" diameter="4.5"/>
+</package>
+<package name="PAD-SCREW-3.0">
+<pad name="1" x="0" y="0" drill="3" diameter="4.5"/>
+</package>
+<package name="PAD-SCREW-2.7">
+<pad name="1" x="0" y="0" drill="2.7" diameter="4.5" stop="no"/>
+</package>
+<package name="SMD1,27-2,54-XL">
+<smd name="1" x="0" y="0" dx="1.27" dy="12.7" layer="1"/>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-0.8" y="-3.67" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RM1XX">
@@ -2411,6 +2434,10 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
 <text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="PAD">
+<pin name="1" x="0" y="0" visible="off" length="point"/>
+<circle x="0" y="0" radius="0.762" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2639,6 +2666,69 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PAD" prefix="P">
+<gates>
+<gate name="G$1" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="NORMAL" package="PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMALL" package="PAD-SMALL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="BIG" package="PAD-BIG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="2.5" package="PAD-SCREW-2.5">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3.0" package="PAD-SCREW-3.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="2.7" package="PAD-SCREW-2.7">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD-XL" package="SMD1,27-2,54-XL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3643,11 +3733,11 @@ http://dangerousprototypes.com</description>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="NAME" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device="" value="Value">
 <attribute name="CNAME" value="RM1xx Lora+BLE breakout board"/>
-<attribute name="CREVISION" value="1.0a"/>
+<attribute name="CREVISION" value="1.1"/>
 <attribute name="DESIGNER" value="Charles-Henri Hallard"/>
 </part>
-<part name="R6" library="_c2h" deviceset="RESISTOR" device="0805-RES" value="390K"/>
-<part name="R7" library="_c2h" deviceset="RESISTOR" device="0805-RES" value="820K"/>
+<part name="R6" library="_c2h" deviceset="RESISTOR" device="0805-RES" value="470K"/>
+<part name="R7" library="_c2h" deviceset="RESISTOR" device="0805-RES" value="1M"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="VBAT" library="SparkFun-Aesthetics" deviceset="VCC" device="" value="Vbat"/>
 <part name="VBAT1" library="SparkFun-Aesthetics" deviceset="VCC" device="" value="Vbat"/>
@@ -3655,10 +3745,23 @@ http://dangerousprototypes.com</description>
 <part name="U$6" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="U$7" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="U$8" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
+<part name="C3" library="LowPowerLab" deviceset="CAP" device="0805-CAP" value="100nF"/>
+<part name="C4" library="LowPowerLab" deviceset="CAP" device="0805-CAP" value="100nF"/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C5" library="LowPowerLab" deviceset="CAP" device="0805-CAP" value="100nF"/>
+<part name="P1" library="_c2h" deviceset="PAD" device="NORMAL"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="67.945" y="127" size="1.778" layer="94">DTR</text>
+<text x="67.945" y="124.46" size="1.778" layer="94">RXD</text>
+<text x="67.945" y="121.92" size="1.778" layer="94">TXD</text>
+<text x="67.945" y="119.38" size="1.778" layer="94">3V3</text>
+<text x="67.945" y="116.84" size="1.778" layer="94">RTS</text>
+<text x="67.945" y="114.3" size="1.778" layer="94">GND</text>
+<text x="67.945" y="107.95" size="1.778" layer="94">CTS</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="140.97" y="59.69"/>
@@ -3671,7 +3774,7 @@ http://dangerousprototypes.com</description>
 <instance part="SUPPLY3" gate="1" x="119.38" y="125.095" smashed="yes">
 <attribute name="VALUE" x="117.729" y="128.016" size="1.778" layer="96"/>
 </instance>
-<instance part="IC3" gate="G$1" x="152.4" y="119.38" rot="MR0"/>
+<instance part="IC3" gate="G$1" x="152.4" y="119.38"/>
 <instance part="C2" gate="G$1" x="166.37" y="107.315" smashed="yes">
 <attribute name="NAME" x="162.814" y="110.236" size="1.778" layer="95"/>
 <attribute name="VALUE" x="160.274" y="105.156" size="1.778" layer="96"/>
@@ -3768,6 +3871,21 @@ http://dangerousprototypes.com</description>
 <instance part="U$6" gate="G$1" x="21.59" y="28.575"/>
 <instance part="U$7" gate="G$1" x="27.94" y="28.575"/>
 <instance part="U$8" gate="G$1" x="34.925" y="28.575"/>
+<instance part="C3" gate="G$1" x="154.94" y="83.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="155.321" y="81.534" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="156.591" y="87.884" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="C4" gate="G$1" x="129.54" y="83.82" smashed="yes" rot="R90">
+<attribute name="NAME" x="129.286" y="81.534" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="131.826" y="87.884" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND6" gate="1" x="120.65" y="83.82" rot="R270"/>
+<instance part="GND7" gate="1" x="161.29" y="83.82" rot="R90"/>
+<instance part="C5" gate="G$1" x="197.485" y="101.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="198.501" y="104.521" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="193.421" y="103.251" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="P1" gate="G$1" x="76.2" y="108.585"/>
 </instances>
 <busses>
 </busses>
@@ -3845,7 +3963,22 @@ http://dangerousprototypes.com</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="204.47" y1="95.25" x2="204.47" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="204.47" y1="95.25" x2="204.47" y2="94.615" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="204.47" y1="94.615" x2="204.47" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="204.47" y1="94.615" x2="197.485" y2="94.615" width="0.1524" layer="91"/>
+<wire x1="197.485" y1="94.615" x2="197.485" y2="96.52" width="0.1524" layer="91"/>
+<junction x="204.47" y="94.615"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="123.19" y1="83.82" x2="124.46" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="158.75" y1="83.82" x2="157.48" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NRESET" class="0">
@@ -3925,11 +4058,6 @@ http://dangerousprototypes.com</description>
 <label x="110.49" y="57.15" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="127" x2="94.107" y2="127" width="0.1524" layer="91"/>
-<label x="86.36" y="127" size="1.778" layer="95"/>
-<pinref part="J2" gate="G$1" pin="6"/>
-</segment>
-<segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="241.3" y1="92.71" x2="241.3" y2="85.09" width="0.1524" layer="91"/>
 <label x="241.3" y="85.09" size="1.778" layer="95" rot="R90"/>
@@ -3940,17 +4068,17 @@ http://dangerousprototypes.com</description>
 <junction x="87.63" y="62.23"/>
 <label x="88.9" y="62.23" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="83.82" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
+<label x="86.36" y="116.84" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="RTS" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SIO23/RTS"/>
 <wire x1="120.65" y1="59.69" x2="110.49" y2="59.69" width="0.1524" layer="91"/>
 <label x="110.49" y="59.69" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="83.82" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
-<label x="86.36" y="116.84" size="1.778" layer="95"/>
-<pinref part="J2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -3962,6 +4090,11 @@ http://dangerousprototypes.com</description>
 <wire x1="87.63" y1="59.69" x2="96.52" y2="59.69" width="0.1524" layer="91"/>
 <junction x="87.63" y="59.69"/>
 <label x="88.9" y="59.69" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="P1" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="108.585" x2="93.98" y2="108.585" width="0.1524" layer="91"/>
+<label x="86.36" y="108.585" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX" class="0">
@@ -4014,10 +4147,10 @@ http://dangerousprototypes.com</description>
 <wire x1="166.37" y1="125.095" x2="166.37" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="166.37" y1="119.38" x2="166.37" y2="112.395" width="0.1524" layer="91"/>
 <junction x="166.37" y="119.38"/>
-<pinref part="IC3" gate="G$1" pin="VI"/>
-<wire x1="162.56" y1="119.38" x2="166.37" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="166.37" y1="119.38" x2="177.8" y2="119.38" width="0.1524" layer="91"/>
 <label x="167.005" y="119.38" size="1.778" layer="95"/>
+<pinref part="IC3" gate="G$1" pin="VO"/>
+<wire x1="162.56" y1="119.38" x2="166.37" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -4031,6 +4164,12 @@ http://dangerousprototypes.com</description>
 <wire x1="140.97" y1="83.82" x2="148.59" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="148.59" y1="83.82" x2="148.59" y2="74.93" width="0.1524" layer="91"/>
 <junction x="140.97" y="83.82"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="133.35" y1="83.82" x2="132.08" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="148.59" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
+<junction x="133.35" y="83.82"/>
+<junction x="148.59" y="83.82"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -4136,9 +4275,13 @@ http://dangerousprototypes.com</description>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="204.47" y1="107.95" x2="204.47" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="204.47" y1="106.68" x2="204.47" y2="105.41" width="0.1524" layer="91"/>
-<wire x1="204.47" y1="106.68" x2="195.58" y2="106.68" width="0.1524" layer="91"/>
-<label x="195.58" y="107.315" size="1.778" layer="95"/>
+<wire x1="204.47" y1="106.68" x2="197.485" y2="106.68" width="0.1524" layer="91"/>
+<label x="191.135" y="107.315" size="1.778" layer="95"/>
 <junction x="204.47" y="106.68"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="197.485" y1="106.68" x2="191.135" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="197.485" y1="104.14" x2="197.485" y2="106.68" width="0.1524" layer="91"/>
+<junction x="197.485" y="106.68"/>
 </segment>
 </net>
 <net name="SIO05" class="0">
@@ -4182,14 +4325,17 @@ http://dangerousprototypes.com</description>
 <junction x="87.63" y="64.77"/>
 <label x="88.9" y="64.77" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="83.82" y1="127" x2="94.107" y2="127" width="0.1524" layer="91"/>
+<label x="86.36" y="127" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="6"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="VO"/>
 <pinref part="SUPPLY3" gate="1" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="119.38" x2="119.38" y2="125.095" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="119.38" x2="137.795" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="137.795" y1="119.38" x2="119.38" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="114.3" x2="119.38" y2="119.38" width="0.1524" layer="91"/>
 <junction x="119.38" y="119.38"/>
@@ -4199,8 +4345,10 @@ http://dangerousprototypes.com</description>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="133.35" y1="146.685" x2="137.795" y2="146.685" width="0.1524" layer="91"/>
 <wire x1="137.795" y1="146.685" x2="137.795" y2="119.38" width="0.1524" layer="91"/>
-<junction x="137.795" y="119.38"/>
 <label x="121.92" y="119.38" size="1.778" layer="95"/>
+<pinref part="IC3" gate="G$1" pin="VI"/>
+<wire x1="142.24" y1="119.38" x2="137.795" y2="119.38" width="0.1524" layer="91"/>
+<junction x="137.795" y="119.38"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
